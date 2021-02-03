@@ -1,0 +1,15 @@
+{
+    "name": "hexlet/code",
+    "authors": [
+        {
+            "name": "otmakhov",
+            "email": "otmakhov1990@gmail.com"
+        }
+    ],
+    "description": "lvl1",
+    "license": "proprietary",
+    "bin": [
+        "bin/brain-games"
+    ],
+    "require": {}
+}
