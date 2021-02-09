@@ -46,3 +46,49 @@ function parityCheck()
 
     line("Congratulations, $name!");
 }
+
+function calc()
+{
+    $name = greeting();
+
+    //Количество правильных ответов
+    $correct = 0;
+
+    line('What is the result of the expression?');
+    while ($correct < 3) {
+
+        //Генерируемое выражение
+        $number1 = random_int(1, 100);
+        $number2 = random_int(1, 100);
+        $arr = ['+', '-', '*'];
+        $x = array_rand($arr);
+        $operation = $arr[$x];
+        switch ($operation) {
+            case "+":
+                $expression = $number1 . '+' . $number2;
+                $result = $number1 + $number2;
+                break;
+            case "-":
+                $expression = $number1 . '-' . $number2;
+                $result = $number1 - $number2;
+                break;
+            case "*":
+                $expression = $number1 . '*' . $number2;
+                $result = $number1 * $number2;
+                break;
+        }
+
+        $answer = prompt("Question $expression");
+        line("Your answer: %s", $answer);
+        if ($answer != $result) {
+            line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
+            line("Let's try again, $name!");
+            exit;
+        } else {
+            line("Correct!");
+            $correct++;
+        }
+    }
+
+    line("Congratulations, $name!");
+}
