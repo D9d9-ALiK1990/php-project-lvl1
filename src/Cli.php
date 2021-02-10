@@ -92,3 +92,34 @@ function calc()
 
     line("Congratulations, $name!");
 }
+
+function gcd()
+{
+    $name = greeting();
+
+    //Количество правильных ответов
+    $correct = 0;
+
+    line('Find the greatest common divisor of given numbers.');
+    while ($correct < 3) {
+
+        //Генерируемое выражение
+        $number1 = random_int(1, 100);
+        $number2 = random_int(1, 100);
+        $expression = $number1 . ' ' . $number2;
+        $result = gmp_gcd($number1, $number2);
+
+        $answer = prompt("Question $expression");
+        line("Your answer: %s", $answer);
+        if ($answer != $result) {
+            line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
+            line("Let's try again, $name!");
+            exit;
+        } else {
+            line("Correct!");
+            $correct++;
+        }
+    }
+
+    line("Congratulations, $name!");
+}

@@ -7,7 +7,7 @@ use function cli\prompt;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$games = ['even', 'calc'];
+$games = ['even', 'calc', 'gcd'];
 
 line('List of games:');
 foreach ($games as $value){

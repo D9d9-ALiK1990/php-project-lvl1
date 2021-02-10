@@ -4,3 +4,4 @@
 <img src="https://github.com/D9d9-ALiK1990/php-project-lvl1/workflows/CI/badge.svg" />
 brain-even https://asciinema.org/a/WXYc8Ta0GzQI7AB9ii5JT5lkt
 brain-calc https://asciinema.org/a/RzDDYFqondiNJCC6llJkyui55
+brain-gcd https://asciinema.org/a/2UT7bYnz4nHn53jsJeTFECgA1
