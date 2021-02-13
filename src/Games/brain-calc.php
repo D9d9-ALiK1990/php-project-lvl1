@@ -11,9 +11,9 @@ function ask(): array
 
     $number1 = random_int(1, 100);
     $number2 = random_int(1, 100);
-    $arif = ['+', '-', '*'];
-    $x = array_rand($arif);
-    $operation = $arif[$x];
+    $arifOperations = ['+', '-', '*'];
+    $operation = array_rand($arifOperations);
+    $operation = $arifOperations[$operation];
     switch ($operation) {
         case "+":
             $expression = $number1 . '+' . $number2;
