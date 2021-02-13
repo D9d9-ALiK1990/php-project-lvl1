@@ -2,8 +2,8 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use function Brain\Games\Cli\parityCheck;
+use function Brain\Games\Engine\play;
 
-parityCheck();
+play('even');
 
 

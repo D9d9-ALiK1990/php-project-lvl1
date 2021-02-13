@@ -2,8 +2,8 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use function Brain\Games\Cli\gcd;
+use function Brain\Games\Engine\play;
 
-gcd();
+play('gcd');
 
 

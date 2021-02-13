@@ -16,15 +16,15 @@ function ask(): array
     $operation = $arifOperations[$operation];
     switch ($operation) {
         case "+":
-            $expression = $number1 . '+' . $number2;
+            $expression = $number1 . ' + ' . $number2;
             $result = $number1 + $number2;
             break;
         case "-":
-            $expression = $number1 . '-' . $number2;
+            $expression = $number1 . ' - ' . $number2;
             $result = $number1 - $number2;
             break;
         case "*":
-            $expression = $number1 . '*' . $number2;
+            $expression = $number1 . ' * ' . $number2;
             $result = $number1 * $number2;
             break;
     }
