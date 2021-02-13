@@ -7,6 +7,3 @@ brain-calc https://asciinema.org/a/U3kZEXSFz15tDHrh3Y0Rp8vEz
 brain-gcd https://asciinema.org/a/tYQdclX7xa6RGDU5wyLm3M7ta
 brain-progression https://asciinema.org/a/WpYWOwEK2y6GoaMoVMK0XHWpc
 brain-prime https://asciinema.org/a/4kyeGpmuf1kA2OJ3Jf1rY08JJ
-
-Дополнительно:
-Возможность выбрать игру: php src/Engine.php 
