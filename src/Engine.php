@@ -27,7 +27,7 @@ function play(string $game)
         $expression = $arr[0];
         $result = $arr[1];
 
-        line("Question $expression");
+        line("Question: $expression");
         $answer = prompt("Your answer");
         if ($answer != $result) {
             line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
