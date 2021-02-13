@@ -1,6 +1,9 @@
 <?php
 
-$question = 'What is the result of the expression?';
+function question()
+{
+    return 'What is the result of the expression?';
+}
 
 function ask(): array
 {

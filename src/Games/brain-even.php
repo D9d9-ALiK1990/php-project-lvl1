@@ -1,6 +1,9 @@
 <?php
 
-$question = 'Answer "yes" if the number is even, otherwise answer "no".';
+function question()
+{
+    return 'Answer "yes" if the number is even, otherwise answer "no".';
+}
 
 function ask(): array
 {

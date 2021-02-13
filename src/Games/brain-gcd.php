@@ -1,6 +1,9 @@
 <?php
 
-$question = 'Find the greatest common divisor of given numbers.';
+function question()
+{
+    return 'Find the greatest common divisor of given numbers.';
+}
 
 function ask(): array
 {

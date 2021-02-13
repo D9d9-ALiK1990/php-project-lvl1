@@ -56,7 +56,6 @@ function calc()
 
     line('What is the result of the expression?');
     while ($correct < 3) {
-
         //Генерируемое выражение
         $number1 = random_int(1, 100);
         $number2 = random_int(1, 100);
@@ -102,12 +101,54 @@ function gcd()
 
     line('Find the greatest common divisor of given numbers.');
     while ($correct < 3) {
-
         //Генерируемое выражение
         $number1 = random_int(1, 100);
         $number2 = random_int(1, 100);
         $expression = $number1 . ' ' . $number2;
         $result = gmp_gcd($number1, $number2);
+
+        $answer = prompt("Question $expression");
+        line("Your answer: %s", $answer);
+        if ($answer != $result) {
+            line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
+            line("Let's try again, $name!");
+            exit;
+        } else {
+            line("Correct!");
+            $correct++;
+        }
+    }
+
+    line("Congratulations, $name!");
+}
+
+function progression()
+{
+    $name = greeting();
+
+    //Количество правильных ответов
+    $correct = 0;
+
+    line('What number is missing in the progression?');
+    while ($correct < 3) {
+        //Генерируемое выражение
+        $length = random_int(5, 10);
+        $step = random_int(1, 10);
+        $start = random_int(1, 25);
+        $arr = [];
+        $i = 0;
+        while ($i < $length) {
+            $arr[] = $start;
+            $start = $start + $step;
+            $i++;
+        }
+        $x = array_rand($arr);
+        $result = $arr[$x];
+        $arr[$x] = '..';
+        $expression = '';
+        foreach ($arr as $value) {
+            $expression = $expression . ' ' . $value;
+        }
 
         $answer = prompt("Question $expression");
         line("Your answer: %s", $answer);
