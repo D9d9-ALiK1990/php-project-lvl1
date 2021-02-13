@@ -32,8 +32,8 @@ function parityCheck()
             $parity = 'yes';
         }
 
-        $answer = prompt("Question $number");
-        line("Your answer: %s", $answer);
+        line("Question $number");
+        $answer = prompt("Your answer");
         if ($answer !== $parity) {
             line("'$answer' is wrong answer ;(. Correct answer was '$parity'.");
             line("Let's try again, $name!");
@@ -76,9 +76,8 @@ function calc()
                 $result = $number1 * $number2;
                 break;
         }
-
-        $answer = prompt("Question $expression");
-        line("Your answer: %s", $answer);
+        line("Question $expression");
+        $answer = prompt("Your answer");
         if ($answer != $result) {
             line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
             line("Let's try again, $name!");
@@ -107,8 +106,8 @@ function gcd()
         $expression = $number1 . ' ' . $number2;
         $result = gmp_gcd($number1, $number2);
 
-        $answer = prompt("Question $expression");
-        line("Your answer: %s", $answer);
+        line("Question $expression");
+        $answer = prompt("Your answer");
         if ($answer != $result) {
             line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
             line("Let's try again, $name!");
@@ -150,8 +149,8 @@ function progression()
             $expression = $expression . ' ' . $value;
         }
 
-        $answer = prompt("Question $expression");
-        line("Your answer: %s", $answer);
+        line("Question $expression");
+        $answer = prompt("Your answer");
         if ($answer != $result) {
             line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
             line("Let's try again, $name!");

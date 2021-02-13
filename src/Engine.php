@@ -19,8 +19,6 @@ if (!in_array($game, $games)) {
     exit;
 }
 
-//$fail = '/Games/brain-' . $game . 'php';
-
 require __DIR__ . '/Games/brain-' . $game . '.php';
 
 // Приветствие
@@ -41,8 +39,8 @@ while ($correct < 3) {
     $expression = $arr[0];
     $result = $arr[1];
 
-    $answer = prompt("Question $expression");
-    line("Your answer: %s", $answer);
+    line("Question $expression");
+    $answer = prompt("Your answer");
     if ($answer != $result) {
         line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
         line("Let's try again, $name!");
