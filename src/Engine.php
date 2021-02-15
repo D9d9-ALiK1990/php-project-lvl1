@@ -4,8 +4,6 @@ namespace Brain\Games\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function cli\out;
-use function cli\out_padded;
 
 function play(string $game)
 {
@@ -28,16 +26,7 @@ function play(string $game)
         $arr = ask();
         $expression = $arr[0];
         $result = $arr[1];
-        if (is_array($expression)) {
-            out("Question:");
-            foreach ($expression as $value) {
-                out(" $value");
-            }
-            line('');
-        }
-        else {
-            line("Question: $expression");
-        }
+        line("Question: $expression");
         $answer = prompt("Your answer");
         if ($answer != $result) {
             line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
