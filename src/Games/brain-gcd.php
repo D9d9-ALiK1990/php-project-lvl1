@@ -18,14 +18,11 @@ function ask(): array
     }
     $i = $number1 % $nod;
     $j = $number2 % $nod;
-    echo $i;
-    echo $j;
-    while($i + $j !== 0 ) {
+    while($i + $j !== 0) {
         $nod--;
         $i = $number1 % $nod;
         $j = $number2 % $nod;
     }
-
     $result = $nod;
     //$result = gmp_gcd($number1, $number2);
     $arr[] = $expression;

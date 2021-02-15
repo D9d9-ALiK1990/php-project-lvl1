@@ -12,9 +12,18 @@ function ask(): array
     //Генерируемое выражение
     $result = 'yes';
     $expression = random_int(1, 100);
-    if (gmp_prob_prime($expression) === 0) {
-        $result = 'no';
+    $i = $expression;
+    while ($i > 2) {
+        $i--;
+        if ($expression % $i === 0) {
+            $result = 'no';
+            echo $i;
+            break;
+        }
     }
+    //if (gmp_prob_prime($expression) === 0) {
+    //    $result = 'no';
+    //}
     $arr[] = $expression;
     $arr[] = $result;
     return $arr;
