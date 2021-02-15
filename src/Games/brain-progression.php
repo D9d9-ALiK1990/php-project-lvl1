@@ -23,11 +23,7 @@ function ask(): array
     $x = array_rand($arrcur);
     $result = $arrcur[$x];
     $arrcur[$x] = '..';
-    $expression = '';
-    foreach ($arrcur as $value) {
-        $expression = $expression . ' ' . $value;
-    }
-    $arr[] = $expression;
+    $arr[] = $arrcur;
     $arr[] = $result;
     return $arr;
 }
