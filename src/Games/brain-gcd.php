@@ -1,6 +1,6 @@
 <?php
 
-function question()
+function question(): string
 {
     return 'Find the greatest common divisor of given numbers.';
 }

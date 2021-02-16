@@ -1,6 +1,6 @@
 <?php
 
-function question()
+function question(): string
 {
     return 'Answer "yes" if the number is even, otherwise answer "no".';
 }

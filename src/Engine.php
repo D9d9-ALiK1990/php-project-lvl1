@@ -5,7 +5,7 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function play(string $game)
+function play(string $game): bool
 {
     require __DIR__ . '/Games/brain-' . $game . '.php';
 
@@ -38,4 +38,5 @@ function play(string $game)
         }
     }
     line("Congratulations, $name!");
+    return true;
 }

@@ -1,6 +1,6 @@
 <?php
 
-function question()
+function question(): string
 {
     return 'What number is missing in the progression?';
 }

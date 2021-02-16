@@ -1,6 +1,6 @@
 <?php
 
-function question()
+function question(): string
 {
     return 'What is the result of the expression?';
 }
@@ -14,6 +14,8 @@ function ask(): array
     $arifOperations = ['+', '-', '*'];
     $operation = array_rand($arifOperations);
     $operation = $arifOperations[$operation];
+    $expression = '';
+    $result = 0;
     switch ($operation) {
         case "+":
             $expression = $number1 . ' + ' . $number2;
