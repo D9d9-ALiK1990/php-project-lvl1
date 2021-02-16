@@ -11,7 +11,7 @@ function ask(): array
 
     //Генерируемое выражение
     $result = 'yes';
-    $expression = random_int(1, 100);
+    $expression = random_int(2, 100);
     $i = $expression;
     while ($i > 2) {
         $i--;
