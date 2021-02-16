@@ -18,7 +18,7 @@ function ask(): array
     }
     $i = $number1 % $nod;
     $j = $number2 % $nod;
-    while($i + $j !== 0) {
+    while ($i + $j !== 0) {
         $nod--;
         $i = $number1 % $nod;
         $j = $number2 % $nod;

@@ -25,7 +25,7 @@ function ask(): array
     $arrcur[$x] = '..';
     $expression = '';
     foreach ($arrcur as $value) {
-        $expression = $expression . ' ' . $value;
+        $expression = $expression . $value . ' ';
     }
     $arr[] = $expression;
     $arr[] = $result;

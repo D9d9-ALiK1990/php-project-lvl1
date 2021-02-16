@@ -17,13 +17,9 @@ function ask(): array
         $i--;
         if ($expression % $i === 0) {
             $result = 'no';
-            echo $i;
             break;
         }
     }
-    //if (gmp_prob_prime($expression) === 0) {
-    //    $result = 'no';
-    //}
     $arr[] = $expression;
     $arr[] = $result;
     return $arr;
